@@ -1,0 +1,51 @@
+﻿<header class="container">
+    <div class="row">
+        <div class="col-md-12 bg-info">
+            <div class="bg-primary pgBar_step">Step1 </div>
+            <div class="bg-primary pgBar_step">Step2 </div>
+            <div class="bg-primary pgBar_step">Step3 </div>
+            <div class="bg-primary pgBar_step">Step4 </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container" ng-controller="ResultController">
+
+    <h1>The name of wind</h1>
+
+    <div class="row">
+
+
+        <div class="col-md-12 result_container">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr ng-repeat="item in currentCart | orderBy:'name'">
+                            <td>
+                                <img ng-src="{{item.image}}" class="thumb_img_small" /></td>
+                            <td>{{item.name}} </td>
+                            <td>{{item.price}} Gald</td>
+                            <td><span class="amount">x {{currentItemQuantity(item.id)}} </span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="total-price">Total Price: {{totalPrice}} Gald</div>
+            <div class="user_info_row">
+                <img src="http://iconbug.com/data/40/507/cf6e3c9d010d2af3871e72e49b85cbf6.png" class="thumb_img_small" />
+                {{userInfo.name}}
+            </div>
+            <div class="user_info_row">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Email_Shiny_Icon.svg/256px-Email_Shiny_Icon.svg.png" class="thumb_img_small" />
+                {{userInfo.email}}
+            </div>
+            
+            <div><a class="btn btn-success continue" ng-click="finishShopping()">Take me to the dragons lair!</a></div>
+        </div>
+
+    </div>
+
+</div>

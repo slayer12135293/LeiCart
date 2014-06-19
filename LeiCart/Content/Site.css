@@ -1,0 +1,98 @@
+﻿.pgBar_step {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.thumb_img {
+    width: 100px;
+    height: 100px;
+}
+
+.thumb_img_small {
+    width: 50px;
+    height: 50px;
+}
+
+.continue {
+    float: right;
+    margin: 10px;
+}
+
+.amount {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.feelinghot table tr td {
+    vertical-align: middle;
+}
+
+.total-price {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.cart_sheet {
+    padding: 10px;
+    background: #FAFFC5;
+}
+
+    .cart_sheet h3 {
+        text-align: center;
+    }
+
+    .cart_sheet .product_row {
+        padding: 5px 0;
+        margin: 10px;
+        font-weight: bold;
+        border-bottom: 1px #000 dashed;
+    }
+
+    .cart_sheet .price {
+        float: right;
+        margin-right: 25px;
+        color: #26910C;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .cart_sheet .price_quantity {
+        text-align: right;
+    }
+
+.reg_container {
+    background: #48CFCB;
+    padding: 25px;
+}
+
+    .reg_container .input_row {
+        margin-bottom: 20px;
+    }
+
+    .reg_container .errormsg {
+        padding: 10px;
+        color: #dc143c;
+    }
+
+    .reg_container .input_row label {
+        width: 100%;
+    }
+
+    .reg_container .input_row .text_field {
+        width: 100%;
+    }
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid #dc143c;
+}
+
+.user_info_row {
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    border-bottom: 1px dashed;
+}

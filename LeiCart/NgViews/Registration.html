@@ -1,0 +1,74 @@
+﻿<header class="container">
+    <div class="row">
+        <div class="col-md-12 bg-info">
+            <div class="bg-primary pgBar_step">Step1 </div>
+            <div class="bg-primary pgBar_step">Step2 </div>
+            <div class="bg-primary pgBar_step">Step3 </div>
+            <div class="pgBar_step">Step4 </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container" ng-controller="RegistrationController">
+    
+    <h1> It's a good day to shop</h1>
+
+    <div class="row">
+        <div class="col-md-8 reg_container">
+            <form name="userInfoForm" ng-submit="submitForm()">
+               
+                <div class="row input_row">
+                    <div class="col-md-8">
+                        <label>Name</label>
+                        <input type="text" placeholder="Name" name="name" ng-model="regForm.name" class="form-control text_field" ng-pattern="/^[a-zA-Z]+$/" required />
+                        <div ng-show="userInfoForm.name.$invalid && userInfoForm.name.$dirty">
+                            <div ng-show="userInfoForm.name.$error.required" class="errormsg"> Name can not be empty</div>
+                            <div ng-show="userInfoForm.name.$error.pattern" class="errormsg"> Name can only have letters</div>
+                        </div>
+                    </div>
+                     
+                </div>
+                <div class="row input_row" >
+                    <div class="col-md-8">
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" name="email" ng-model="regForm.email" class="form-control text_field"  required />
+                        <div ng-show="userInfoForm.email.$invalid && userInfoForm.email.$dirty">
+                            <div ng-show="userInfoForm.email.$error.required" class="errormsg"> Email can not be empty</div>
+                        </div>
+                    </div>
+                     
+                </div>
+              
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" value="Shut up and take my money!" ng-disabled="userInfoForm.$dirty && userInfoForm.$invalid" class="btn btn-primary"/>
+
+                    </div>
+                     
+                </div>
+            </form>
+            
+
+        </div>
+        <div class="col-md-4">
+            <div class="cart_sheet">
+                <h3>My Goodies </h3>
+                <div class="row product_row" ng-repeat="item in currentCart | orderBy:'name'">
+                    <div class="col-md-7">{{item.name}}</div>
+                    <div class="col-md-5 price_quantity">{{item.quantity}} x {{item.price}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="price">
+                        Total Price : {{totalPrice}} Gald
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

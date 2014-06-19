@@ -1,0 +1,59 @@
+﻿<header class="container">
+    <div class="row">
+        <div class="col-md-12 bg-info">
+            <div class="bg-primary pgBar_step">Step1 </div>
+            <div class="bg-primary pgBar_step">Step2 </div>
+            <div class="pgBar_step">Step3 </div>
+            <div class="pgBar_step">Step4 </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container" ng-controller="CartController">
+    <h1> Reconsidering ?</h1>
+
+    <div class="row">
+        <div class="col-md-12 bg-success">
+            <img src="https://cdn0.iconfinder.com/data/icons/iconsweets2/40/shopping_cart_webshop.png"/> 
+            My Shopping Cart
+            
+            <div class="total-price">Total Price: {{totalPrice}} Gald</div>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in currentCart | orderBy:'name'">
+                            <td><img ng-src="{{item.image}}" class="thumb_img" /></td>
+                            <td>{{item.name}} </td>
+                            <td>{{item.price}} Gald</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" ng-click="RemoveFromCart(item)"> - </button>
+                                <span class="amount"> {{currentItemQuantity(item.id)}} </span>
+                                <button type="button" class="btn btn-primary" ng-click="AddToCart(item)"> + </button>
+                            </td>
+                            <td> <button type="button" class="btn btn-danger" ng-click="RemoveThis(item)"> X </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div><a class="btn btn-success continue" href="#/RegForm">Yes! Me want these!</a></div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
