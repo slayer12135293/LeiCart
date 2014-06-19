@@ -146,6 +146,8 @@
     <Content Include="Scripts\Angular\Controllers\ResultController.js" />
     <Content Include="Scripts\Angular\Controllers\RegistrationController.js" />
     <Content Include="Scripts\Angular\Controllers\IndexController.js" />
+    <Content Include="Scripts\Angular\Directives\ProgressBar.js" />
+    <Content Include="Scripts\Angular\Directives\Templates\Progressbar.html" />
     <Content Include="Scripts\Angular\Factories\CartServiceFactory.js" />
     <Content Include="Scripts\Angular\Models.js" />
     <Content Include="Scripts\Angular\Factories\ShoppingCartFactory.js" />

@@ -10,6 +10,7 @@ namespace LeiCart
         {
             var angularApp = new ScriptBundle("~/angularApp");
             angularApp.Include("~/Scripts/angular/*.js");
+            angularApp.Include("~/Scripts/angular/directives/*.js");
             angularApp.Include("~/Scripts/angular/factories/*.js");
             angularApp.Include("~/Scripts/angular/controllers/*.js");
             bundles.Add(angularApp);

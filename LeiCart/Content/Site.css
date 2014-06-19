@@ -1,9 +1,30 @@
-﻿.pgBar_step {
+﻿.banner {
+    height: 125px;
+    background: #F2D33B;
+    width: 100%;
+    background-image: url('http://pictures.4ever.eu/data/674xX/fun/homer-simpson-148094.jpg');
+    background-size: 144px 155px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 30px;
+    font-size: 40px;
+}
+
+.pgBar_step {
     width: 25%;
     float: left;
     text-align: center;
     padding: 15px 0;
 }
+
+.progress_bar {
+    background: #daa520;
+}
+
+    .progress_bar .progress_step {
+        height: 5px;
+        background: #000080;
+    }
 
 .thumb_img {
     width: 100px;

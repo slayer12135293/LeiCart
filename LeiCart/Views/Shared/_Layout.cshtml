@@ -6,20 +6,28 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">  
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
-<body  ng-app="LeiCart" class="feelinghot">
+    <body  ng-app="LeiCart" class="feelinghot">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 banner">
+                    Lei's Item Store - Sweeter than donuts!
+                </div>
+                
+            </div>
+        </div>
 
-    @RenderBody()
-    <div ng-view ></div>
+        @RenderBody()
+        <div ng-view ></div>
    
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
-    @Scripts.Render("~/angularApp")
+        @Scripts.Render("~/angularApp")
 
-    @RenderSection("Footer", false)
+        @RenderSection("Footer", false)
 
-</body>
+    </body>
 </html>
