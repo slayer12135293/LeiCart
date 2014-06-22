@@ -14,7 +14,7 @@
                 <div class="row input_row">
                     <div class="col-md-8">
                         <label>Name</label>
-                        <input type="text" placeholder="Name" name="name" ng-model="regForm.name" class="form-control text_field" ng-pattern="/^[a-zA-Z]+$/" required />
+                        <input type="text" placeholder="Name" name="name" ng-model="regForm.name" class="form-control text_field" ng-pattern="/^[A-Za-z\s]+$/" required />
                         <div ng-show="userInfoForm.name.$invalid && userInfoForm.name.$dirty">
                             <div ng-show="userInfoForm.name.$error.required" class="errormsg"> Name can not be empty</div>
                             <div ng-show="userInfoForm.name.$error.pattern" class="errormsg"> Name can only have letters</div>

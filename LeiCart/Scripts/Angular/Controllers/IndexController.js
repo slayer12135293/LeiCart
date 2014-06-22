@@ -24,5 +24,4 @@ LeiCart.controller('IndexController', ['$scope','AvailableProducts', 'CreateCart
         $route.reload();
     };
 
-
 }]);

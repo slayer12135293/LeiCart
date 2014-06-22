@@ -14,6 +14,7 @@ namespace LeiCart.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
 
     }
