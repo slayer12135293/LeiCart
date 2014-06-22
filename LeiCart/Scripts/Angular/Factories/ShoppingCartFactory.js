@@ -6,10 +6,7 @@ LeiCart.factory('CartFeature', [function () {
         var newCart;
         if (cart === undefined || cart===null) {
             itemContainer = loadCart('leiCart');
-            newCart = {
-                cartName: 'leiCart',
-                items: itemContainer
-            };
+            newCart = createTempCart(itemContainer);
 
         } else {
             itemContainer = cart.items;
@@ -46,39 +43,56 @@ LeiCart.factory('CartFeature', [function () {
     var loadCart = function (key) {
         return getLocalStorage(key);
     };
-    
+
+    var isCartEmpty = function(cart) {
+        if (cart === null) {
+            return true;
+        }
+        return false;
+    };
+
+    var createTempCart = function(items) {
+        var newCart = {
+            cartName: 'leiCart',
+            items: items
+        };
+        return newCart;
+    };
+
 
     var getTotoalPrice = function () {
-        var cart = getLocalStorage('leiCart');
-        if (cart === null) {
+        var cart = loadCart('leiCart');
+        if (isCartEmpty(cart)) {
             return 0;
+        } else {
+            var price = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var currentItem = cart[i];
+                price += currentItem.price * currentItem.quantity;
+            }
+            return price;
         }
 
-        var price = 0;
-        for (var i = 0; i < cart.length; i++) {
-            var currentItem = cart[i];
-            price += currentItem.price * currentItem.quantity;
-        }
-        return price;
+
     };
     var getTotalCount = function () {
-        var cart = getLocalStorage('leiCart');
-        if (cart=== null){
+        var cart = loadCart('leiCart');
+        if (isCartEmpty(cart)) {
             return 0;
+        } else {
+            var count = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var currentItem = cart[i];
+                count += currentItem.quantity;
+            }
+            return count;
         }
-        var count = 0;
-        for (var i = 0; i < cart.length; i++) {
-            var currentItem = cart[i];
-            count += currentItem.quantity;
-        }
-        return count;
+       
     };
 
     var removeItemFromCart = function (item) {
-        var updatedCart = {
-            cartName: 'leiCart',
-            items: loadCart('leiCart')
-        };
+        var items = loadCart('leiCart');
+        var updatedCart = createTempCart(items);
         for (var i = 0; i < updatedCart.items.length; i++) {
             if (updatedCart.items[i].id === item.id) {
                 updatedCart.items.splice(i, 1);
@@ -87,7 +101,6 @@ LeiCart.factory('CartFeature', [function () {
             }
         }
     };
-
 
     var emptyCart = function () {
         localStorage.removeItem('leiCart');

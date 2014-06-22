@@ -149,6 +149,7 @@
     <Content Include="Scripts\Angular\Directives\ProgressBar.js" />
     <Content Include="Scripts\Angular\Directives\Templates\Progressbar.html" />
     <Content Include="Scripts\Angular\Factories\CartServiceFactory.js" />
+    <Content Include="Scripts\Angular\Factories\AvailableProducts.js" />
     <Content Include="Scripts\Angular\Models.js" />
     <Content Include="Scripts\Angular\Factories\ShoppingCartFactory.js" />
     <Content Include="Scripts\Angular\Routing.js" />

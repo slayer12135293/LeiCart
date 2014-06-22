@@ -1,5 +1,4 @@
 ﻿.banner {
-    height: 125px;
     background: #F2D33B;
     width: 100%;
     background-image: url('http://pictures.4ever.eu/data/674xX/fun/homer-simpson-148094.jpg');
@@ -19,6 +18,7 @@
 
 .progress_bar {
     background: #daa520;
+    clear: both;
 }
 
     .progress_bar .progress_step {

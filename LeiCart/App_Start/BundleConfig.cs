@@ -15,7 +15,9 @@ namespace LeiCart
             angularApp.Include("~/Scripts/angular/controllers/*.js");
             bundles.Add(angularApp);
 
-            bundles.UseCdn = true;
+            var cssBundle = new StyleBundle("~/css");
+            cssBundle.IncludeDirectory("~/Content/", "*.css", true);
+            bundles.Add(cssBundle);
 
             //BundleTable.EnableOptimizations = true;
         }

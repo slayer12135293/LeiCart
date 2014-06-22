@@ -5,8 +5,7 @@ LeiCart.factory('CreateCart', [function () {
         cart: function (cartname) {
             return {
                 cartName: cartname,
-                items: [],
-                clearCart: false
+                items: []
             };
         }
     };
